@@ -62,7 +62,7 @@ public strictfp class GeometryTestCase extends TestCase {
   }
 
   public void assertDoubleNear(double a, double b, double error) {
-    assertTrue(a + error > b);
+    assertTrue("(a + error) = (" + a + " + " + error + ") = " + (a + error) + " <= b=" + b , a + error > b);
     assertTrue(a < b + error);
   }
 
